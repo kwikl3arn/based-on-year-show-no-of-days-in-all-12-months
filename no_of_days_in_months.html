@@ -1,0 +1,103 @@
+<html>
+<head>	 
+<script src=" https://code.jquery.com/jquery-3.3.1.js"></script>
+
+</head>
+  <body>
+    
+        <label>date:</label>
+        <select id="sha">
+            <option>select</option>
+           <option>2016</option>
+            <option>2017</option>
+            <option>2018</option>
+            <option>2019</option>
+            <option>2020</option>
+            <option>2021</option>
+        </select>
+        <table>
+            <tr>
+            <th>jan</th>
+            <th>feb</th>
+            <th>march</th>
+            <th>april</th>
+            <th>may</th>
+            <th>june</th>
+            <th>july</th>
+            <th>aug</th>
+            <th>sep</th>
+            <th>oct</th>
+            <th>nov</th>
+            <th>dec</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="1">
+                </td>
+                
+                <td>
+                   <input type="text" id="2">
+                </td>
+                
+                <td>
+                   <input type="text" id="3">
+                </td>
+                
+                <td>
+                   <input type="text" id="4">
+                </td>                
+              
+                <td>
+                    <input type="text" id="5">
+                </td>
+                
+                <td>
+                    <input type="text" id="6">
+                </td>
+                
+                <td>
+                    <input type="text" id="7">
+                </td>
+                
+                 <td>
+                    <input type="text" id="8">
+                </td>
+                
+                <td>
+                    <input type="text" id="9">
+                </td>
+                
+                <td>
+                    <input type="text" id="10">
+                </td>
+                
+                <td>
+                    <input type="text" id="11">
+                </td>
+                
+                <td>
+                    <input type="text" id="12">
+                </td>
+            </tr>
+        </table>
+
+        <script>
+        $("#sha").change(function(){
+            var year = $("#sha option:selected").text();
+//            alert(year);
+            var month;
+            for(month=1; month<=12; month++){
+                
+              var days = new Date(year,month,1,-1).getDate(); //to get no of days
+              
+              var id = "#"+month;// building id here to insert the days in the text field
+              $(id).val(days);
+
+            }  
+        });
+        </script>
+
+        
+        
+    </body>
+</html>
